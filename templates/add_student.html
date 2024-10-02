@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>ADD FACE</title>
+</head>
+
+<body>
+        <h2 class="center">Add Student</h2>
+    <div class="screen">
+        <img id="video_feed" class="cap" name="video_cam" src="{{ url_for('video_feed') }}"  />
+    </div>
+    <form id="capture-form" action="/add_student" method="post">
+        <table>
+            <tr>
+                <input type="text" id="name" name="name" placeholder="ENTER YOUR NAME"
+                style="position: fixed; top: 50%; left:60% ;"><br><br>
+    
+                <input type="text" id="usn" name="usn" placeholder="ENTER USN"
+                style="position: fixed; top: 50%; left:75% ;"><br><br>
+    
+                <input type="submit" value="ADD STUDENT" class="input">
+            </tr>
+        </table>
+    </form>
+
+    <a href="/" class ="back">PREVIOUS PAGE</a>
+</body>
+</html> 

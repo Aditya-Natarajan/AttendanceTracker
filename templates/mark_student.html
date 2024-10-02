@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>MARK ATTENDANCE</title>
+</head>
+
+<body>
+    <h2 class="center   ">Mark Attendance</h2>
+    <div class="screen">
+        <img id="video_feed" name="video_cam" class="cap" src="{{ url_for('video_feed') }}" style="width:50%;" />
+    </div>
+
+    <form id="take_attend" action="/mark_attendance">
+        <input type="submit" value="TAKE ATTENDENCE" class="input" >
+    </form>
+
+    <a href="/" class ="back">PREVIOUS PAGE</a>
+</body>
+</html>

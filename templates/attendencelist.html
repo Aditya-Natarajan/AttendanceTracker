@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../static/styles.css">
+  <title>Attendance List</title>
+</head>
+
+<body>
+  <a href="/" class ="back">PREVIOUS PAGE</a>
+  <h2 class="center">Attendence list</h2>
+  <br><br>
+  <table class="table check" >
+    <thead>
+      <tr>
+        <th scope="col" class="list_head">Sl No</th>
+        <th scope="col" class="list_head">USN</th>
+        <th scope="col" class="list_head">NAME</th>
+        <th scope="col" class="list_head"> TOTAL CLASSES ATTENDED</th>
+        <th scope="col" class="list_head"> TOTAL %</th>
+        <th scope="col" class="list_head"> LATEST ATTENDED</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in my_list %}
+      <tr>
+        <td scope="row" class="list_item">{{ loop.index }}</td>
+        {% for value in row %}
+        <td class="list_item">{{ value }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+
+</html>
